@@ -1,0 +1,25 @@
+$max-width: 1200px;
+
+html {
+    font-size: 1.0rem;
+}
+body {
+    display: grid;
+    margin: 0 auto;
+    max-width: $max-width;
+}
+nav {
+    padding: 10px;
+    ul {
+        list-style-type: none;
+        li {
+            float: left;
+            padding: 10px 20px 10px 20px;
+            border: 1px solid black;
+            a {
+                text-decoration: none;
+                color: none;
+            }
+        }
+    }
+}
