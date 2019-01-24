@@ -3,6 +3,7 @@ $nav-highlight: #FCFCFC;
 $nav-highlight-hover: #E2E2E2;
 
 body {
+    padding: 10px 0px 10px 0px;
     display: grid;
     margin: 0 auto;
     max-width: $max-width;
@@ -40,5 +41,7 @@ body {
     }
     section.col-9 {
         grid-column: 1/9;
+        border: 1px solid black;
+        padding: 10px 20px 10px 20px;
     }
 }
