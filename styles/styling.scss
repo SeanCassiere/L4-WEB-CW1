@@ -4,6 +4,7 @@ $body-background: #FFFFFF;
 $max-width: 1200px;
 $nav-highlight: #FCFCFC;
 $nav-highlight-hover: #E2E2E2;
+$nav-highlight-hover-btn: rebeccapurple;
 
 html {
     background-color: $html-background;
@@ -36,27 +37,43 @@ body {
                     padding: 10px 20px 10px 20px;
                     background-color: $nav-highlight;
                     border: 1px solid #B6B6B6;
+                    margin: 0px 4px 0px 4px;
+                    -webkit-border-radius: 2px;
+                    -moz-border-radius: 2px;
+                    border-radius: 2px;
+                    text-align: center;
+                    box-shadow: 0 1px 1px 0 rgba(0,0,0,0.10);
                     a {
                         text-decoration: none;
                         color: black;
                     }
                 }:hover {
-                    color: rebeccapurple;
+                    color: $nav-highlight-hover-btn;
                     background-color: $nav-highlight-hover;
+                    a {
+                        color: $nav-highlight-hover-btn;
+                    }
                 }
             }
         }
         .nav-right {
             grid-column: 8/9;
             padding: 20px 20px 20px 20px;
+            text-align: right;
             button {
-                padding: 7px 10px 7px 10px;
+                width: 30%;
+                height: 100%;
                 background-color: $nav-highlight;
                 border: 1px solid #B6B6B6;
                 color: black;
+                margin: 0px 4px 0px 4px;
+                text-align: center;
+                -webkit-border-radius: 2px;
+                -moz-border-radius: 2px;
+                border-radius: 2px;
+                box-shadow: 0 1px 1px 0 rgba(0,0,0,0.10);
             }
             :hover {
-                color: rebeccapurple;
                 background-color: $nav-highlight-hover;
             }
         }

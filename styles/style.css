@@ -29,23 +29,38 @@ body {
           float: left;
           padding: 10px 20px 10px 20px;
           background-color: #FCFCFC;
-          border: 1px solid #B6B6B6; }
+          border: 1px solid #B6B6B6;
+          margin: 0px 4px 0px 4px;
+          -webkit-border-radius: 2px;
+          -moz-border-radius: 2px;
+          border-radius: 2px;
+          text-align: center;
+          box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1); }
           body .row .nav-left ul li a {
             text-decoration: none;
             color: black; }
         body .row .nav-left ul :hover {
           color: rebeccapurple;
           background-color: #E2E2E2; }
+          body .row .nav-left ul :hover a {
+            color: rebeccapurple; }
     body .row .nav-right {
       grid-column: 8/9;
-      padding: 20px 20px 20px 20px; }
+      padding: 20px 20px 20px 20px;
+      text-align: right; }
       body .row .nav-right button {
-        padding: 7px 10px 7px 10px;
+        width: 30%;
+        height: 100%;
         background-color: #FCFCFC;
         border: 1px solid #B6B6B6;
-        color: black; }
+        color: black;
+        margin: 0px 4px 0px 4px;
+        text-align: center;
+        -webkit-border-radius: 2px;
+        -moz-border-radius: 2px;
+        border-radius: 2px;
+        box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1); }
       body .row .nav-right :hover {
-        color: rebeccapurple;
         background-color: #E2E2E2; }
     body .row .full-col-8 {
       grid-column: 1/9;
