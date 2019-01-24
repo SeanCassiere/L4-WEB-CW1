@@ -1,12 +1,15 @@
-function realGetFontSize(){
-    if (document.html.style.fontSize == ""){
-        document.html.style.fontSize == "1.0rem"
-    }
-    document.getElementById('nowFontSize').innerHTML = 'Working';
-//  document.html.style.fontSize = parseFloat(document.html.style.fontSize) + (1 * 0.2) + 'rem';
+function increaseFontSize() {
+    txt = document.getElementById('content');
+    style = window.getComputedStyle(txt, null).getPropertyValue('font-size');
+    currentSize = parseFloat(style);
+    txt.style.fontSize = (currentSize + 1) + 'px';
+}
+function decreaseFontSize() {
+	txt = document.getElementById('content');
+    style = window.getComputedStyle(txt, null).getPropertyValue('font-size');
+    currentSize = parseFloat(style);
+    txt.style.fontSize = (currentSize - 1) + 'px';
 }
 
-//document.getElementById("nowFontSizeBtn").addEventListener("click",function(){document.getElementById('nowFontSize').innerHTML = 'Working';});
-//document.getElementById("nowFontSizeBtn").addEventListener("click",function(){realGetFontSize();});
-//document.getElementById("nowFontSizeBtn").addEventListener("click",function(){document.getElementById('nowFontSize').innerHTML = document.html.style.fontSize;+"Check"});
-document.getElementById("nowFontSizeBtn").addEventListener("click",function(){var elem = document.getElementById("lines");var theCSSprop = window.getComputedStyle(elem, null).getPropertyValue("font-size");document.getElementById("nowFontSize").innerHTML = theCSSprop;});
+document.getElementById("decreaseFont").addEventListener("click",function(){decreaseFontSize();});
+document.getElementById("increaseFont").addEventListener("click",function(){increaseFontSize();});
