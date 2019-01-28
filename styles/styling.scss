@@ -3,12 +3,14 @@ $body-background: #FFFFFF;
 
 $max-width: 1200px;
 $nav-highlight: #FCFCFC;
+$nav-highlight-active: #E3EDDF;
 $nav-highlight-hover: #E2E2E2;
 $nav-highlight-hover-btn: rebeccapurple;
 
 html {
     background-color: $html-background;
-    padding: 10px 0px 10px 0px;
+    padding: 0px;
+    height: 100%;
 }
 
 p {justify-content: space-evenly;}
@@ -17,7 +19,8 @@ p {justify-content: space-evenly;}
 
 body {
     padding: 10px 0px 10px 0px;
-    margin: 0 auto;
+    margin: 10px auto;
+    min-height: 93%;
     max-width: $max-width;
     background-color: $body-background;
     box-shadow: 0 5px 5px 0 rgba(0,0,0,0.10);
@@ -33,19 +36,22 @@ body {
             ul {
                 list-style-type: none;
                 li {
-                    float: left;
-                    padding: 10px 20px 10px 20px;
-                    background-color: $nav-highlight;
-                    border: 1px solid #B6B6B6;
-                    margin: 0px 4px 0px 4px;
-                    -webkit-border-radius: 2px;
-                    -moz-border-radius: 2px;
-                    border-radius: 2px;
-                    text-align: center;
-                    box-shadow: 0 1px 1px 0 rgba(0,0,0,0.10);
                     a {
+                        float: left;
+                        padding: 10px 20px 10px 20px;
+                        background-color: $nav-highlight;
+                        border: 1px solid #B6B6B6;
+                        margin: 0px 4px 0px 4px;
+                        -webkit-border-radius: 2px;
+                        -moz-border-radius: 2px;
+                        border-radius: 2px;
+                        text-align: center;
+                        box-shadow: 0 1px 1px 0 rgba(0,0,0,0.10);
                         text-decoration: none;
                         color: black;
+                    }
+                    .active{
+                        background-color: $nav-highlight-active;
                     }
                 }:hover {
                     color: $nav-highlight-hover-btn;
