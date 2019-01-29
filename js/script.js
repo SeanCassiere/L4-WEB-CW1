@@ -1,14 +1,15 @@
 function increaseFontSize() {
-    txt = document.getElementById('content');
-    style = window.getComputedStyle(txt, null).getPropertyValue('font-size');
-    currentSize = parseFloat(style);
-    txt.style.fontSize = (currentSize + 2) + 'px';
+    docElement = document.getElementById('content');
+    style = window.getComputedStyle(docElement, null).getPropertyValue('font-size');
+    currentFontSize = parseFloat(style);
+    docElement.style.fontSize = (currentFontSize + 2) + 'px';
 }
+
 function decreaseFontSize() {
-	txt = document.getElementById('content');
-    style = window.getComputedStyle(txt, null).getPropertyValue('font-size');
-    currentSize = parseFloat(style);
-    txt.style.fontSize = (currentSize - 2) + 'px';
+	docElement = document.getElementById('content');
+    style = window.getComputedStyle(docElement, null).getPropertyValue('font-size');
+    currentFontSize = parseFloat(style);
+    docElement.style.fontSize = (currentFontSize - 2) + 'px';
 }
 
 document.getElementById("decreaseFont").addEventListener("click",function(){decreaseFontSize();});

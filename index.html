@@ -5,33 +5,44 @@
         <title>Members | Group X</title>
     </head>
     <body id="content">
-        <section class="row">
-            <section class="nav-right">
-                <button type="button" id="pauseTimer">Pause</button>
-                <button type="button" id="restartTimer">Restart</button>
+        <nav id="nav-bar">
+            <section class="nav-logo">
+                test
+            </section>
+            <section class="nav-items">
+                <ul>
+                    <li><a href="home.html" class="active">Home</a></li>
+                    <li><a href="index.html">Member Timeout</a></li>
+                    <li><a href="#">Link</a></li>
+                </ul>
+            </section>
+            <section class="nav-resize">
+                <button type="button" id="decreaseFont">-</button>
+                <button type="button" id="increaseFont">+</button>
+            </section>
+        </nav>
+        
+        <section id="page-content">
+            <section class="row">
+                <section class="full-col-8">
+                    <h2>Group Members</h2>
+                </section>
+                <section class="temp-col-4">
+                    <section class="col4-left-1">
+                        <h1>Dinuka</h1>    
+                    </section>
+                    <section class="col4-left-2">
+                        <h1>Kavisha</h1>    
+                    </section>
+                    <section class="col4-right-1">
+                        <h1>Isanka</h1>    
+                    </section>
+                    <section class="col4-right-2">
+                        <h1>Sean</h1>
+                    </section>
+                </section>
             </section>
         </section>
-        
-        <section class="row">
-            <section class="full-col-8">
-                <h2>Group Members</h2>
-            </section>
-            <section class="temp-col-4">
-                <section class="col4-left-1">
-                    <h1>Dinuka</h1>    
-                </section>
-                <section class="col4-left-2">
-                    <h1>Kavisha</h1>    
-                </section>
-                <section class="col4-right-1">
-                    <h1>Isanka</h1>    
-                </section>
-                <section class="col4-right-2">
-                    <h1>Sean</h1>
-                </section>
-            </section>
-        </section>
-        
     </body>
     <!--<script>setTimeout(function(){window.location.href = 'home.html';}, 4000);</script>-->
     <script type="text/javascript" language="javascript" src="js/timeout.js"></script>
