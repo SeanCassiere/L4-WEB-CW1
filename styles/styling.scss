@@ -1,13 +1,13 @@
-$html-background: #F5F4F4; //F9FFF8
-$body-background: #FFFFFF;
-
-$break-mobile: 680px;
+$html-background: #EEEEEE; //F9FFF8
+$body-background: #FFFFFF; //#FFFFFF
 
 $max-width: 1200px;
 $nav-highlight: #F7F7F7;
 $nav-highlight-active: #E3EDDF;
 $nav-highlight-hover: #E2E2E2;
-$nav-highlight-hover-btn: rebeccapurple;
+$nav-highlight-hover-btn: #FF5151;
+
+$footer-text-color: #FBFBFB;
 
 html {
     background-color: $html-background;
@@ -24,20 +24,25 @@ p {
 }
 
 body {
+    max-width: $max-width;
+    margin: 0 auto;
     #nav-bar {
         display: grid;
         grid-template-columns: repeat(12,fr);
         grid-auto-rows: minmax(10px, auto);
-        grid-template-areas: ".nar-logo .nav-items .nav-resize";
-        margin: 0 auto;
-        max-width: $max-width;
+        display: -ms-grid; //MS IE Support
+        -ms-grid-columns: 1fr 10fr 1fr;
         position: sticky;
         top: 0px;
         background-color: $body-background;
         box-shadow: 0 5px 5px 0 rgba(0,0,0,0.10);
         padding: 0%;
+        border-bottom-left-radius: 3px;
+        border-bottom-right-radius: 3px;
         .nav-logo {
             grid-column: 1/3;
+            -ms-grid-row: 1;
+            -ms-grid-column: 1; 
             color: black;
             text-align: center;
             padding-left: 2%;
@@ -45,6 +50,8 @@ body {
         }
         .nav-items {
             grid-column: 3/12;
+            -ms-grid-row: 1;
+            -ms-grid-column: 2;
             text-align: right;
             color: black;
             padding-left: 2%;
@@ -83,6 +90,8 @@ body {
         }
         .nav-resize {
             grid-column: 12/13;
+            -ms-grid-row: 1;
+            -ms-grid-column: 3; 
             color: black;
             text-align: center;
             padding-top: 8%;
@@ -110,54 +119,87 @@ body {
         padding: 10px 0px 10px 0px;
         margin: 10px auto;
         min-height: 93%;
-        max-width: $max-width;
         background-color: $body-background;
         box-shadow: 0 5px 5px 0 rgba(0,0,0,0.10);
+        border-radius: 3px;
         .row {
             display: grid;
             grid-template-columns: repeat(8, 1fr);
             grid-auto-rows: minmax(50px, auto);
+            display: -ms-grid; //MS IE Support
+            -ms-grid-columns: 1fr 1fr 1fr 1fr;
             grid-gap: 10px;
             padding: 4px 20px 4px 20px;
             .full-col-8 {
                 grid-column: 1/9;
+                -ms-grid-row: 1;
+                -ms-grid-column: 1;
+                -ms-grid-column-span: 8;
                 padding: 0px 20px 0px 20px;
             }
             .temp-col-4 {
-                grid-column: 1/9; 
+                grid-column: 1/9;
+                -ms-grid-row: 1;
+                -ms-grid-column: 1;
+                -ms-grid-column-span: 8;
                 display: grid;
                 grid-template-columns: repeat(4, 1fr);
                 grid-auto-rows: minmax(50px, auto);
+                display: -ms-grid;
+                -ms-grid-columns: 1fr 1fr 1fr 1frs;
                 padding: 10px 20px 10px 20px;
                 .col2-1 {
                     grid-column: 1/3;
+                    -ms-grid-row: 1;
+                    -ms-grid-column: 1;
+                    -ms-grid-column-span: 2;
                     padding: 0px 20px 0px 20px;
                 }
                 .col2-2 {
                     grid-column: 3/5;
+                    -ms-grid-row: 1;
+                    -ms-grid-column: 3;
+                    -ms-grid-column-span: 2;
                     padding: 0px 20px 0px 20px;
                 }
                 .col4-1{
                     grid-column: 1/2;
+                    -ms-grid-row: 1;
+                    -ms-grid-column: 1;
+                    -ms-grid-column-span: 1;
                     padding: 10px 20px 0px 20px;
                 }
                 .col4-2{
                     grid-column: 2/3;
+                    -ms-grid-row: 1;
+                    -ms-grid-column: 2;
+                    -ms-grid-column-span: 1;
                     padding: 10px 20px 0px 20px;
                 }
                 .col4-3{
                     grid-column: 3/4;
+                    -ms-grid-row: 1;
+                    -ms-grid-column: 3;
+                    -ms-grid-column-span: 1;
                     padding: 10px 20px 0px 20px;
                 }
                 .col4-4{
                     grid-column: 4/5;
-                    padding: 10px 20px 0px 20px;
-                }
-                .col8 {
-                    grid-column: 1/5;
+                    -ms-grid-row: 1;
+                    -ms-grid-column: 4;
+                    -ms-grid-column-span: 1;
                     padding: 10px 20px 0px 20px;
                 }
             }
         }    
+    }
+    #footer {
+        height: 10%;
+        background-color: black;
+        padding: 2% 2% 1% 2%;
+        opacity: 0.8;
+        color: $footer-text-color;
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
     }
 }
