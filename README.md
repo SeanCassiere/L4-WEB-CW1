@@ -16,4 +16,4 @@ Currently, the project is marked as 'Work-in-Progress'.
 
 **During submission, exclude the following folders *.git* & *docs*.**
 
-This site is being built using [GitHub Pages](https://pages.github.com/) & [Brackets](http://brackets.io/).
+This site is being built using [GitHub Pages](https://pages.github.com/), [Brackets](http://brackets.io/) & [SASS (Syntactically Awesome Style Sheets)](https://sass-lang.com/).
