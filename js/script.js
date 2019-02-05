@@ -1,3 +1,5 @@
+
+// GLOBAL FONT RESIZE
 function increaseFontSize() {
     docElement = document.getElementById('content');
     style = window.getComputedStyle(docElement, null).getPropertyValue('font-size');
@@ -11,6 +13,10 @@ function decreaseFontSize() {
     currentFontSize = parseFloat(style);
     docElement.style.fontSize = (currentFontSize - 2) + 'px';
 }
+// < ISANKA QUIZ
 
+// CODE HERE
+
+// >
 document.getElementById("decreaseFont").addEventListener("click",function(){decreaseFontSize();});
 document.getElementById("increaseFont").addEventListener("click",function(){increaseFontSize();});

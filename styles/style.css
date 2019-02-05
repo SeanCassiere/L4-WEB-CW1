@@ -156,6 +156,12 @@ body {
           -ms-grid-column: 3;
           -ms-grid-column-span: 1;
           padding: 10px 20px 0px 20px; }
+        body #page-content .row .temp-col-4 .col4-span-3 {
+          grid-column: 1/4;
+          -ms-grid-row: 1;
+          -ms-grid-column: 1;
+          -ms-grid-column-span: 3;
+          padding: 10px 20px 0px 20px; }
         body #page-content .row .temp-col-4 .col4-4 {
           grid-column: 4/5;
           -ms-grid-row: 1;
