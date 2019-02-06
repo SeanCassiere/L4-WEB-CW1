@@ -10,9 +10,9 @@ Currently, the project is marked as 'Work-in-Progress'.
 + Dinuka Bandara (2017193, w1716114)
 
 ## Technlogies Used.
-1. HTML5.
-2. JavaScript.
-3. CSS3 complied using SASS (Syntactically Awesome Style Sheets).
+1. [HTML5](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5).
+2. [JavaScript](https://www.javascript.com/).
+3. [CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3) complied using [SASS (Syntactically Awesome Style Sheets)](https://sass-lang.com/).
 
 **During submission, exclude the following folders *.git* & *docs*.**
 
