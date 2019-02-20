@@ -1,0 +1,16 @@
+*{margin:0; padding: 0;}
+
+body {
+    #presentation {
+        background-color: black;
+        color: white;
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        text-align: center;
+        padding-top: 5%;
+        .presentation-member {
+            padding: 1.5%;
+        }
+    }
+}
