@@ -35,11 +35,11 @@ body {
     max-width: $max-width;
     margin: 0 auto;
     height: 75%;
-    #nav-bar {
-        position: sticky;
+        #nav-bar-content {
+        position: fixed;
         top: 0;
         display: grid;
-        grid-template-columns: repeat(12,fr);
+        grid-template-columns: repeat(12, 1fr);
         grid-auto-rows: minmax(10px, auto);
         display: -ms-grid; //MS IE Support
         -ms-grid-columns: 1fr 10fr 1fr;
@@ -56,7 +56,7 @@ body {
             text-align: center;
             padding-left: 2%;
             padding-right: 2%;
-        }
+            }
         .nav-items {
             grid-column: 3/12;
             -ms-grid-row: 1;
@@ -89,41 +89,43 @@ body {
                     }
                 }
                 :hover {
-                    color: $nav-highlight-hover-btn;
+                     color: $nav-highlight-hover-btn;
                     background-color: $nav-highlight-hover;
                     a {
                         color: $nav-highlight-hover-btn;
                     }
+                    }
                 }
             }
-        }
-        .nav-resize {
-            grid-column: 12/13;
-            -ms-grid-row: 1;
-            -ms-grid-column: 3; 
-            color: black;
-            text-align: center;
-            padding-top: 8%;
-            padding-left: 2%;
-            padding-right: 2%;
-            button {
-                width: 30%;
-                height: 80%;
-                padding: 2% 2% 2% 2%;
-                background-color: $nav-highlight;
-                text-align: center;
+            .nav-resize {
+                grid-column: 12/13;
+                -ms-grid-row: 1;
+                -ms-grid-column: 3; 
                 color: black;
-                border: none;
-                -webkit-border-radius: 2px;
-                -moz-border-radius: 2px;
-                border-radius: 2px;
-                box-shadow: 0 1px 1px 0 rgba(0,0,0,0.10);
+                text-align: center;
+                padding-top: 8%;
+                padding-left: 2%;
+                padding-right: 2%;
+                button {
+                    width: 30%;
+                    height: 80%;
+                    padding: 2% 2% 2% 2%;
+                    background-color: $nav-highlight;
+                    text-align: center;
+                    color: black;
+                    border: none;
+                    -webkit-border-radius: 2px;
+                    -moz-border-radius: 2px;
+                    border-radius: 2px;
+                    box-shadow: 0 1px 1px 0 rgba(0,0,0,0.10);
+                }
+                :hover {
+                    background-color: $nav-highlight-hover;
+                }
             }
-            :hover {
-                background-color: $nav-highlight-hover;
-            }
-        }
+        }    
     }
+    
     #page-content {
         min-height: 93%;
         padding: 10px 0px 10px 0px;

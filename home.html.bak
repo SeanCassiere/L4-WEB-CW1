@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="styles/style.css" type="text/css">
+        <title>Home | Group X</title>
+    </head>
+    <body id="content">
+        <div id="nav-bar">
+            <nav id="nav-bar-content">
+                <section class="nav-logo">
+                    test
+                </section>
+                <section class="nav-items">
+                    <ul>
+                        <li><a href="home.html" class="active">Home</a></li>
+                        <li><a href="index.html">Member Timeout</a></li>
+                        <li><a href="#">Purchase</a></li>
+                        <li><a href="music-quiz.html">Music Quiz</a></li>
+                        <li><a href="#editor">Editor</a></li>
+                    </ul>
+                </section>
+                <section class="nav-resize">
+                    <button type="button" id="decreaseFont">-</button>
+                    <button type="button" id="increaseFont">+</button>
+                </section>
+            </nav>
+        </div>
+        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+        <section id="page-content">
+            <section class="row">
+                <section class="full-col-8">
+                    <h2>Lorem Ipsum</h2>
+                    <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla molestie dapibus mollis. Donec et tincidunt urna. Quisque sed consequat erat. Sed ac nulla tortor. Donec vel enim nisi. Pellentesque pellentesque nec urna ac bibendum. Donec et dictum quam. Cras pretium finibus est sed tristique. Nullam feugiat imperdiet mattis. Aenean luctus sapien sit amet arcu sollicitudin facilisis.
+                    </p>
+                    <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla molestie dapibus mollis. Donec et tincidunt urna. Quisque sed consequat erat. Sed ac nulla tortor. Donec vel enim nisi. Pellentesque pellentesque nec urna ac bibendum. Donec et dictum quam. Cras pretium finibus est sed tristique. Nullam feugiat imperdiet mattis. Aenean luctus sapien sit amet arcu sollicitudin facilisis.
+                    </p>
+                    <p><a href="https://www.w3schools.com/jsref/jsref_getcomputedstyle.asp" target="_blank">https://www.w3schools.com/jsref/jsref_getcomputedstyle.asp</a></p>
+                    <hr>
+                </section>
+            </section>
+
+            <section class="row">
+                <section class="full-col-8">
+                    <h2>2 Collumn</h2>
+                </section>
+            </section>
+            
+            <section class="row">
+                <section class="temp-col-4">
+                    <section class="col2-1">
+                        <h2>Left Collumn</h2>
+                        <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla molestie dapibus mollis. Donec et tincidunt urna. Quisque sed consequat erat. Sed ac nulla tortor. Donec vel enim nisi. Pellentesque pellentesque nec urna ac bibendum. Donec et dictum quam. Cras pretium finibus est sed tristique. Nullam feugiat imperdiet mattis. Aenean luctus sapien sit amet arcu sollicitudin facilisis.
+                        </p>
+                    </section>
+                    <section class="col2-2">
+                        <h2>Right Collumn</h2>
+                        <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla molestie dapibus mollis. Donec et tincidunt urna. Quisque sed consequat erat. Sed ac nulla tortor. Donec vel enim nisi. Pellentesque pellentesque nec urna ac bibendum. Donec et dictum quam. Cras pretium finibus est sed tristique. Nullam feugiat imperdiet mattis. Aenean luctus sapien sit amet arcu sollicitudin facilisis.
+                        </p>
+                    </section>
+                </section>
+            </section>
+
+            <section class="row">
+                <section class="full-col-8">
+                    <h1>4 Collumn</h1>
+                </section>
+            </section>
+            
+            <section class="row">
+                <section class="temp-col-4">
+                    <section class="col4-1">
+                        <h2>Collumn 1</h2>
+                        <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla molestie dapibus mollis. Donec et tincidunt urna. Quisque sed consequat erat. Sed ac nulla tortor. Donec vel enim nisi. Pellentesque pellentesque nec urna ac bibendum. Donec et dictum quam. Cras pretium finibus est sed tristique. Nullam feugiat imperdiet mattis. Aenean luctus sapien sit amet arcu sollicitudin facilisis.
+                        </p>
+                    </section>
+                    <section class="col4-2">
+                        <h2>Collumn 2</h2>
+                        <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla molestie dapibus mollis. Donec et tincidunt urna. Quisque sed consequat erat. Sed ac nulla tortor. Donec vel enim nisi. Pellentesque pellentesque nec urna ac bibendum. Donec et dictum quam. Cras pretium finibus est sed tristique. Nullam feugiat imperdiet mattis. Aenean luctus sapien sit amet arcu sollicitudin facilisis.
+                        </p>
+                    </section>
+                    <section class="col4-3">
+                        <h2>Collumn 3</h2>
+                        <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla molestie dapibus mollis. Donec et tincidunt urna. Quisque sed consequat erat. Sed ac nulla tortor. Donec vel enim nisi. Pellentesque pellentesque nec urna ac bibendum. Donec et dictum quam. Cras pretium finibus est sed tristique. Nullam feugiat imperdiet mattis. Aenean luctus sapien sit amet arcu sollicitudin facilisis.
+                        </p>
+                    </section>
+                    <section class="col4-4">
+                        <h2>Collumn 4</h2>
+                        <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla molestie dapibus mollis. Donec et tincidunt urna. Quisque sed consequat erat. Sed ac nulla tortor. Donec vel enim nisi. Pellentesque pellentesque nec urna ac bibendum. Donec et dictum quam. Cras pretium finibus est sed tristique. Nullam feugiat imperdiet mattis. Aenean luctus sapien sit amet arcu sollicitudin facilisis.
+                        </p>
+                    </section>
+                </section>
+            </section>
+            
+            <section class="row">
+                <section class="temp-col-4">
+                    <section class="col4-1">
+                        <h2>Collumn 1</h2>
+                        <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla molestie dapibus mollis. Donec et tincidunt urna. Quisque sed consequat erat. Sed ac nulla tortor. Donec vel enim nisi. Pellentesque pellentesque nec urna ac bibendum. Donec et dictum quam. Cras pretium finibus est sed tristique. Nullam feugiat imperdiet mattis. Aenean luctus sapien sit amet arcu sollicitudin facilisis.
+                        </p>
+                    </section>
+                    <section class="col4-2">
+                        <h2>Collumn 2</h2>
+                        <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla molestie dapibus mollis. Donec et tincidunt urna. Quisque sed consequat erat. Sed ac nulla tortor. Donec vel enim nisi. Pellentesque pellentesque nec urna ac bibendum. Donec et dictum quam. Cras pretium finibus est sed tristique. Nullam feugiat imperdiet mattis. Aenean luctus sapien sit amet arcu sollicitudin facilisis.
+                        </p>
+                    </section>
+                    <section class="col4-3">
+                        <h2>Collumn 3</h2>
+                        <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla molestie dapibus mollis. Donec et tincidunt urna. Quisque sed consequat erat. Sed ac nulla tortor. Donec vel enim nisi. Pellentesque pellentesque nec urna ac bibendum. Donec et dictum quam. Cras pretium finibus est sed tristique. Nullam feugiat imperdiet mattis. Aenean luctus sapien sit amet arcu sollicitudin facilisis.
+                        </p>
+                    </section>
+                    <section class="col4-4">
+                        <h2>Collumn 4</h2>
+                        <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla molestie dapibus mollis. Donec et tincidunt urna. Quisque sed consequat erat. Sed ac nulla tortor. Donec vel enim nisi. Pellentesque pellentesque nec urna ac bibendum. Donec et dictum quam. Cras pretium finibus est sed tristique. Nullam feugiat imperdiet mattis. Aenean luctus sapien sit amet arcu sollicitudin facilisis.
+                        </p>
+                    </section>
+                </section>
+            </section>
+            
+            <section class="row" id="editor">
+                <section class="editor">
+                    <h2>Editor</h2>
+                    
+                </section>
+            </section>
+
+        </section>
+        <footer id="footer" class="default-border">
+        Dummy text
+        </footer>
+        <script type="text/javascript" language="javascript" src="js/script.js"></script>
+    </body>
+</html>
