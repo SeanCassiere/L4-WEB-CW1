@@ -248,6 +248,7 @@ body#content {
   body#content #footer {
     background-color: rgba(255, 255, 255, 0.96);
     position: relative;
+    width: auto;
     bottom: 0;
     padding: 1em 2em 1em 2em;
     display: grid;
@@ -280,17 +281,16 @@ body#content {
           margin: 0px 4px 0px 4px;
           text-align: center;
           min-width: 5em; }
-          body#content #footer .pages ul li a {
-            color: black;
-            text-decoration: none;
-            transition: color 0.5s ease; }
-        body#content #footer .pages ul :hover a {
-          color: #FF4D4D; }
     body#content #footer .copyright {
       padding-top: 2em;
       grid-column: 10/13;
       -ms-grid-row: 2;
       -ms-grid-column: 9;
       -ms-grid-column-span: 3; }
+  body#content a {
+    text-decoration: none;
+    color: black; }
+    body#content a:hover {
+      color: #FF4D4D; }
 
 /*# sourceMappingURL=style.css.map */
