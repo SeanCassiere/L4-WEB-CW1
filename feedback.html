@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="styles/style.css" type="text/css">
+        <title>Feedback | Group 2 | BIS A</title>
+    </head>
+    <body id="content">
+        <nav id="nav-bar" class="box-shadow">
+            <div id="nav-logo">
+                <img src="imgs/common/logo.png" width="100px" height="30px" />
+            </div>
+            <div id="nav-items">
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="index.html">Presentation</a></li>
+                    <li><a href="feedback.html" class="active">Feedback</a></li>
+                    <li><a href="#editor">Editor</a></li>
+                </ul>
+            </div>
+            <div id="nav-resize">
+                <button type="button" id="decreaseFont">-</button>
+                <button type="button" id="increaseFont">+</button>
+            </div>
+        </nav>
+        <div id="page-content" class="box-shadow">
+            <div class="row">
+                <div class="col8-1">
+                    <h1>Feedback</h1>
+                </div>
+            </div>
+            <form class="row" name="sitefeedback">
+                <div class="col4-2">
+                    <p class="text-bold">Name : <input type="text" name="feedbackname" placeholder="John Doe"></p>
+                </div>
+                <div class="col4-3">
+                    <p class="text-bold">Email : <input type="text" name="feedbackemail" placeholder="someone@example.com"></p>
+                </div>
+                <div class="col4-2">
+                    <p class="text-bold">Rating :</p> 
+                        <select name="feedbackrating">
+                            <option value="1">Very</option>
+                            <option value="2">Poor</option>
+                            <option value="3" selected>Good</option>
+                            <option value="4">Very Good</option>
+                            <option value="5">Excellent</option>
+                        </select>
+                </div>
+                <div class="col4-3">
+                    <p class="text-bold">Comments</p>
+                    <textarea id="feedbackcomments" name="feebackcomments" placeholder="Any additional comments?"></textarea>
+                </div>
+                <div class="col4-2 align-right">
+                    <input type="submit" value="Submit">
+                </div>
+                <div class="col4-3">
+                    <input type="reset" value="Clear">
+                </div>
+            </form>
+            
+        </div>
+        
+        <section id="editor" class="box-shadow">
+            <h2>Editor: Student 2</h2>
+            <div id="editor-img">
+                <img src="imgs/profiles/sean.jpg">
+            </div>
+            <section id="editor-details">
+                <h3>Details</h3>
+                <p class="bold">Name: </p>Sean Cassiere
+                <p class="bold">Email: </p>sean.2016074@iit.ac.lk
+            </section>
+        </section>
+        
+        <footer id="footer">
+            <div class="contact">
+                <h3>Contact</h3>
+            </div>
+            <div class="social">
+                <h3>Social</h3>
+            </div>
+            <div class="pages">
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="Purchase">Purchase</a></li>
+                    <li><a href="quiz.html">Quiz</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
+                    <li><a href="index.html">Presentation</a></li>
+                    <li><a href="sitemap.html">SiteMap</a></li>
+                </ul>
+            </div>
+            <div class="copyright">
+                <p>Copyright &copy; 2019 BIS A | Group 2</p>
+            </div>
+        </footer>
+        <script type="text/javascript" language="javascript" src="js/script.js"></script>
+    </body>
+</html>
