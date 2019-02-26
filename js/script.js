@@ -67,6 +67,6 @@ function feedbackValidator(FeedBackForm){
 }
 
 // Event Listeners
-document.getElementById("feedbackSubmit").addEventListener("click", function(){feedbackValidator(this.form);}); //Feedback Form Validator
 document.getElementById("decreaseFont").addEventListener("click",function(){decreaseFontSize();}); //Font Size Decrease -
 document.getElementById("increaseFont").addEventListener("click",function(){increaseFontSize();}); //Font Size Increase +
+document.getElementById("feedbackSubmit").addEventListener("click", function(){feedbackValidator(this.form);}); //Feedback Form Validator
