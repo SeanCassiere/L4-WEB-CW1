@@ -70,7 +70,7 @@ if (FeedBackFormElement) { FeedBackFormElement.addEventListener('click',function
 
 
 // Music Quiz Form: Student 3
-var triedQuiz = false; // Created as a bool var to uncheck the selected radios
+var triedQuiz = false; // Created as a bool var to uncheck the selected radios, change question colours
 var quizDuration = 40;
 var timeOut;
 var sec;
@@ -83,7 +83,7 @@ function musicquizLoadDisable(status){
 }
 
 function musicquizValidator(MusicQuizForm){
-    var timeRemaining = quizDuration-sec; //Change this
+    var timeRemaining = quizDuration-sec;
     clearInterval(timeOut);
     var totalMarks = 0;
     var question01 = MusicQuizForm.question01.value;
