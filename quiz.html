@@ -30,12 +30,38 @@
                     <h1>Quiz</h1>
                     <p>We have a short quiz for you to check your music trivia knowledge.</p>
                     <p>Let's see how well you do.</p>
+                    <p>https://www.usefultrivia.com/music_trivia/</p>
                     <hr>
                 </div>
             </div>
             <div class="row">
                 <form class="form" name="music-quiz">
-                
+                    <div class="form-full-col1-1 align-center">
+                        <input type="button" id="startTimer" value="Start Timer" class="btn">
+                    </div>
+                    <div class="form-center-col2-1 align-right">
+                        <p class="text-bold">Timer Remaining : </p>
+                    </div>
+                    <div class="form-center-col2-2">
+                        <p id="quizTimer" class="text-bold">60</p>
+                    </div>
+                    <div class="form-full-col1-1">
+                        <p class="text-bold">1. 'Call Me Maybe' is a 2012 hit by whom?</p>
+                        <p><input type="radio" name="question01" value="Cher Lloyd" id="question01op01" disabled><label for="question01op01"> Cher Lloyd</label></p>
+                        <p><input type="radio" name="question01" value="Demi Lovato" id="question01op02"><label for="question01op02"> Demi Lovato</label></p>
+                        <p><input type="radio" name="question01" value="Selena Gomez" id="question01op03"><label for="question01op03"> Selena Gomez</label></p>
+                        <p><input type="radio" name="question01" value="Carly Rae Jespsen" id="question01op04"><label for="question01op04"> Carly Rae Jepsen</label></p>
+                    </div>
+                    <div class="form-full-col1-1">
+                        <p class="text-bold">2. Which pop singer is known as "The Material Girl"?</p>
+                        <p><input type="radio" name="question02" value="Britney Spears" id="question02op01"><label for="question02op01"> Britney Spears</label></p>
+                        <p><input type="radio" name="question02" value="Christina Aguilera" id="question02op02"><label for="question02op02"> Christina Aguilera</label></p>
+                        <p><input type="radio" name="question02" value="Taylor Swift" id="question02op03"><label for="question02op03"> Taylor Swift</label></p>
+                        <p><input type="radio" name="question02" value="Madonna" id="question02op04"><label for="question02op04"> Madonna</label></p>
+                    </div>
+                    <div class="form-full-col1-1 align-center">
+                        <input type="button" id="quizSubmit" class="btn" value="Check Answers">
+                    </div>
                 </form>
             </div>
         </div>
