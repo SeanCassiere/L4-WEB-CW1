@@ -71,18 +71,46 @@ if (FeedBackFormElement) { FeedBackFormElement.addEventListener('click',function
 
 // Music Quiz Form: Student 3
 var triedQuiz = false; // Created as a bool var to uncheck the selected radios
+var quizDuration = 40;
 var timeOut;
 var sec;
+
+function musicquizLoadDisable(status){
+    var cells = document.getElementsByClassName("questions"); 
+    for (var i = 0; i < cells.length; i++) { 
+        cells[i].disabled = status;
+    }
+}
+
 function musicquizValidator(MusicQuizForm){
-    var timeRemaining = 10-sec; //Change this
+    var timeRemaining = quizDuration-sec; //Change this
     clearInterval(timeOut);
     var totalMarks = 0;
     var question01 = MusicQuizForm.question01.value;
     var question02 = MusicQuizForm.question02.value;
     var question03 = MusicQuizForm.question03.value;
-    if (question01=="Carly Rae Jespsen"){totalMarks+=2;} else {totalMarks-=1}
-    if (question02=="Madonna"){totalMarks+=2} else {totalMarks-=1}
-    if (question03=="Dizzy Gillespie"){totalMarks+=2} else {totalMarks-=1}
+    if (question01=="Carly Rae Jespsen") {
+        totalMarks+=2;
+        document.getElementById('question01-box').style.backgroundColor = '#38FF2F';
+    } else {
+        totalMarks-=1
+        document.getElementById('question01-box').style.backgroundColor = '#FF3A3A';
+    }
+    if (question02=="Madonna") {
+        totalMarks+=2;
+        document.getElementById('question02-box').style.backgroundColor = '#38FF2F';
+    } else {
+        totalMarks-=1;
+        document.getElementById('question02-box').style.backgroundColor = '#FF3A3A';
+    }
+    if (question03=="Dizzy Gillespie") {
+        totalMarks+=2;
+        document.getElementById('question03-box').style.backgroundColor = '#38FF2F';
+    } else {
+        totalMarks-=1;
+        document.getElementById('question03-box').style.backgroundColor = '#FF3A3A';
+    }
+    triedQuiz = true;
     alert('You scored '+totalMarks+'. It took you '+timeRemaining+'s to complete this quiz.');
     document.getElementById("startTimer").value = "Retry";
 }
@@ -98,13 +126,22 @@ function musicquizTimer(){
 	document.getElementById("quizTimer").innerHTML = sec+'s';
 }
 
-function musicquizLoadDisable(status){
+function musicquizReset(quizForm){
     var cells = document.getElementsByClassName("questions"); 
-    for (var i = 0; i < cells.length; i++) { 
-        cells[i].disabled = status;
+    for (var i = 0; i < cells.length; i++) {
+        cells[i].checked = false;
+    }
+    var cells = document.getElementsByClassName("colored-questions"); 
+    for (var i = 0; i < cells.length; i++) {
+        cells[i].style.backgroundColor = 'white';
     }
 }
 // (Conditional) Event Listeners
+var MusicQuizFormLoad = document.getElementById("music-quiz-form");
+if (MusicQuizFormLoad) {
+    MusicQuizFormLoad.addEventListener("load", musicquizLoadDisable(true))
+}
+
 var MusicQuizFormSubmit = document.getElementById("quizSubmit");
 if (MusicQuizFormSubmit) {
     MusicQuizFormSubmit.addEventListener('click',function(){musicquizValidator(this.form)});
@@ -113,13 +150,11 @@ if (MusicQuizFormSubmit) {
 var MusicQuizFormStartButton = document.getElementById("startTimer");
 if (MusicQuizFormStartButton) {
     MusicQuizFormStartButton.addEventListener('click',function(){
-        sec = 10;
+        if (triedQuiz == true) {
+            musicquizReset(this.form);
+        }
+        sec = quizDuration;
         musicquizLoadDisable(true);
-        timeOut = setInterval(musicquizTimer, sec*100);
+        timeOut = setInterval(musicquizTimer, 1000);
     });
-}
-
-var MusicQuizFormLoad = document.getElementById("music-quiz-form");
-if (MusicQuizFormLoad) {
-    MusicQuizFormLoad.addEventListener("load", musicquizLoadDisable(true))
 }
