@@ -1,7 +1,7 @@
 $top-bottom-bg: rgba(255,255,255,0.96);
 $active-hover-color: #FF4D4D;
 $max-width: 960px;
-$screen-break: 540px;
+$screen-break: 600px;
 
 *{margin:0; padding: 0;}
 
@@ -370,7 +370,7 @@ body#content {
             -ms-grid-column-span: 3;
         }
     }
-    @media screen and (max-width: $screen-break){
+    @media only screen and (max-width: $screen-break) {
         #nav-bar{
             display: grid;
             background-color: $top-bottom-bg;
