@@ -83,36 +83,65 @@ function musicquizLoadDisable(status){
 }
 
 function musicquizValidator(MusicQuizForm){
-    var timeRemaining = quizDuration-sec;
-    clearInterval(timeOut);
-    var totalMarks = 0;
     var question01 = MusicQuizForm.question01.value;
     var question02 = MusicQuizForm.question02.value;
     var question03 = MusicQuizForm.question03.value;
-    if (question01=="Carly Rae Jespsen") {
-        totalMarks+=2;
-        document.getElementById('question01-box').style.backgroundColor = '#38FF2F';
+    var question04 = MusicQuizForm.question04.value;
+    var question05 = MusicQuizForm.question05.value;
+    var question06 = MusicQuizForm.question06.value;
+    var question07 = MusicQuizForm.question07.value;
+    var question08 = MusicQuizForm.question08.value;
+    
+    if ( question01.length == 0 || question02.length == 0 || question03.length == 0 || question04.length ==0 || question05.length ==0 || question06.length ==0 || question07.length ==0 || question08.length ==0 ){
+        alert('All Questions must be answered.')
     } else {
-        totalMarks-=1
-        document.getElementById('question01-box').style.backgroundColor = '#FF3A3A';
+        var timeRemaining = quizDuration-sec;
+        var totalMarks = 0;
+        clearInterval(timeOut);
+        if (question01=="Carly Rae Jespsen") {
+            totalMarks+=2;document.getElementById('question01-box').style.backgroundColor = '#38FF2F';
+        } else {
+            totalMarks-=1;document.getElementById('question01-box').style.backgroundColor = '#FF3A3A';
+        }
+        if (question02=="Madonna") {
+            totalMarks+=2;document.getElementById('question02-box').style.backgroundColor = '#38FF2F';
+        } else {
+            totalMarks-=1;document.getElementById('question02-box').style.backgroundColor = '#FF3A3A';
+        }
+        if (question03=="Dizzy Gillespie") {
+            totalMarks+=2;document.getElementById('question03-box').style.backgroundColor = '#38FF2F';
+        } else {
+            totalMarks-=1;document.getElementById('question03-box').style.backgroundColor = '#FF3A3A';
+        }
+        if (question04=="Justin Timberlake") {
+            totalMarks+=2;document.getElementById('question04-box').style.backgroundColor = '#38FF2F';
+        } else {
+            totalMarks-=1;document.getElementById('question04-box').style.backgroundColor = '#FF3A3A';
+        }
+        if (question05=="Paul McCartney") {
+            totalMarks+=2;document.getElementById('question05-box').style.backgroundColor = '#38FF2F';
+        } else {
+            totalMarks-=1;document.getElementById('question05-box').style.backgroundColor = '#FF3A3A';
+        }
+        if (question06=="Hopeless Place") {
+            totalMarks+=2;document.getElementById('question06-box').style.backgroundColor = '#38FF2F';
+        } else {
+            totalMarks-=1;document.getElementById('question06-box').style.backgroundColor = '#FF3A3A';
+        }
+        if (question07=="Roar") {
+            totalMarks+=2;document.getElementById('question07-box').style.backgroundColor = '#38FF2F';
+        } else {
+            totalMarks-=1;document.getElementById('question07-box').style.backgroundColor = '#FF3A3A';
+        }
+        if (question08=="Thriller") {
+            totalMarks+=2;document.getElementById('question08-box').style.backgroundColor = '#38FF2F';
+        } else {
+            totalMarks-=1;document.getElementById('question08-box').style.backgroundColor = '#FF3A3A';
+        }
+        triedQuiz = true;
+        alert('You scored a '+totalMarks+' out of 16. It took you '+timeRemaining+'s to complete this quiz.');
+        document.getElementById("startTimer").value = "Retry";
     }
-    if (question02=="Madonna") {
-        totalMarks+=2;
-        document.getElementById('question02-box').style.backgroundColor = '#38FF2F';
-    } else {
-        totalMarks-=1;
-        document.getElementById('question02-box').style.backgroundColor = '#FF3A3A';
-    }
-    if (question03=="Dizzy Gillespie") {
-        totalMarks+=2;
-        document.getElementById('question03-box').style.backgroundColor = '#38FF2F';
-    } else {
-        totalMarks-=1;
-        document.getElementById('question03-box').style.backgroundColor = '#FF3A3A';
-    }
-    triedQuiz = true;
-    alert('You scored '+totalMarks+'. It took you '+timeRemaining+'s to complete this quiz.');
-    document.getElementById("startTimer").value = "Retry";
 }
 
 function musicquizTimer(){
