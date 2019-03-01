@@ -374,13 +374,12 @@ body#content {
         #nav-bar{
             display: grid;
             background-color: $top-bottom-bg;
-            grid-template-columns: repeat(3, 1fr);
-            grid-template-rows: repeat(3, minmax(10px, auto));
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: repeat(1, minmax(5px, auto));
             grid-template-areas:
-                "nav-logo nav-logo nav-logo"
-                "nav-items nav-items nav-items"
-                "nav-resize nav-resize nav-resize";
+                "nav-items nav-items nav-items nav-items nav-resize";
             #nav-logo {
+                display: none;
                 grid-area: nav-logo;
             }
             #nav-items {
@@ -388,16 +387,16 @@ body#content {
                 ul {
                     justify-content: center;
                 }
-                
             }
             #nav-resize {
                 grid-area: nav-resize;
             }
         }
         #page-content {
-            margin-top: 9em;
+            margin-top: 4.5em;
         }
         #editor {
+            margin-top: 0em;
             display: grid;
             grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
             grid-template-rows: repeat(4, auto);
@@ -424,6 +423,7 @@ body#content {
             }
         }
         #footer {
+            margin-top: 0em;
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             grid-template-rows: repeat(2, 1fr);

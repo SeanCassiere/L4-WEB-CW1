@@ -321,10 +321,11 @@ body#content {
     body#content #nav-bar {
       display: grid;
       background-color: rgba(255, 255, 255, 0.96);
-      grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: repeat(3, minmax(10px, auto));
-      grid-template-areas: "nav-logo nav-logo nav-logo" "nav-items nav-items nav-items" "nav-resize nav-resize nav-resize"; }
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-rows: repeat(1, minmax(5px, auto));
+      grid-template-areas: "nav-items nav-items nav-items nav-items nav-resize"; }
       body#content #nav-bar #nav-logo {
+        display: none;
         grid-area: nav-logo; }
       body#content #nav-bar #nav-items {
         grid-area: nav-items; }
@@ -333,8 +334,9 @@ body#content {
       body#content #nav-bar #nav-resize {
         grid-area: nav-resize; }
     body#content #page-content {
-      margin-top: 9em; }
+      margin-top: 4.5em; }
     body#content #editor {
+      margin-top: 0em;
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
       grid-template-rows: repeat(4, auto); }
@@ -357,6 +359,7 @@ body#content {
         grid-column: 1/7;
         grid-row: 4/4; }
     body#content #footer {
+      margin-top: 0em;
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       grid-template-rows: repeat(2, 1fr); }
