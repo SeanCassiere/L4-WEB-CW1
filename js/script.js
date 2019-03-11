@@ -272,3 +272,23 @@ var galleryImage6 = document.getElementById('galleryClick6');
 if (galleryImage6) {
     galleryImage6.addEventListener('click', function(){galleryImageChange(this)})
 }
+
+var galleryPageColor = document.getElementById('pageBackgroundForm');
+if (galleryPageColor) {
+    galleryPageColor.addEventListener('click', function(){
+        document.getElementById("page-content").style.backgroundColor = galleryPageColor.pageBackground.value;
+        document.getElementById("nav-bar").style.backgroundColor = galleryPageColor.pageBackground.value;
+        document.getElementById("editor").style.backgroundColor = galleryPageColor.pageBackground.value;
+        document.getElementById("footer").style.backgroundColor = galleryPageColor.pageBackground.value;
+    })
+}
+
+var galleryFontColor = document.getElementById('pageFontColorForm');
+if (galleryFontColor) {
+    galleryFontColor.addEventListener('click', function(){
+        document.getElementById("page-content").style.color = galleryFontColor.pageFontColor.value;
+        document.getElementById("nav-bar").style.color = galleryFontColor.pageFontColor.value;
+        document.getElementById("editor").style.color = galleryFontColor.pageFontColor.value;
+        document.getElementById("footer").style.color = galleryFontColor.pageFontColor.value;
+    })
+}
