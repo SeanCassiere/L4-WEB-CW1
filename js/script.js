@@ -236,3 +236,39 @@ if (ProductCheckout) {
         }
     })
 }
+
+// Gallery
+
+function galleryImageChange(taggedItem){
+    var bigImg = document.getElementById('expandedImage');
+    var bigImgTxt = document.getElementById('expandedImageText');
+    bigImg.src = taggedItem.src;
+    bigImgTxt.innerHTML = taggedItem.alt;
+    bigImg.parentElement.style.display = "block";
+}
+
+// (Conditional) Event Listener
+var galleryImage1 = document.getElementById('galleryClick1');
+if (galleryImage1) {
+    galleryImage1.addEventListener('click', function(){galleryImageChange(this)})
+}
+var galleryImage2 = document.getElementById('galleryClick2');
+if (galleryImage2) {
+    galleryImage2.addEventListener('click', function(){galleryImageChange(this)})
+}
+var galleryImage3 = document.getElementById('galleryClick3');
+if (galleryImage3) {
+    galleryImage3.addEventListener('click', function(){galleryImageChange(this)})
+}
+var galleryImage4 = document.getElementById('galleryClick4');
+if (galleryImage4) {
+    galleryImage4.addEventListener('click', function(){galleryImageChange(this)})
+}
+var galleryImage5 = document.getElementById('galleryClick5');
+if (galleryImage5) {
+    galleryImage5.addEventListener('click', function(){galleryImageChange(this)})
+}
+var galleryImage6 = document.getElementById('galleryClick6');
+if (galleryImage6) {
+    galleryImage6.addEventListener('click', function(){galleryImageChange(this)})
+}
