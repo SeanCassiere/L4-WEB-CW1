@@ -14,8 +14,6 @@ html {scroll-behavior: smooth;}
 .align-center {text-align: center;}
 .text-bold {font-weight: bold;}
 
-
-
 body#content {
     font-family: 'Lato', sans-serif;
     width: 100%;
@@ -156,8 +154,8 @@ body#content {
                     margin: 0px 4px 0px 4px;
                     text-align: center;
                     min-width: 3em;
-                    padding-left: 0.15em;
-                    padding-right: 0.15em;
+                    padding-left: 0.03em;
+                    padding-right: 0.03em;
                     a {
                         color: black;
                         text-decoration: none;
@@ -491,7 +489,9 @@ body#content {
                 grid-column: 2/6;
                 grid-row: 2/2;
                 text-align: center;
-                img {width: 50%;}
+                img {
+                    width: 50%;
+                }
             }
             #editor-details {
                 grid-column: 1/7;

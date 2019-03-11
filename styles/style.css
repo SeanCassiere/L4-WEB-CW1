@@ -150,8 +150,8 @@ body#content {
           margin: 0px 4px 0px 4px;
           text-align: center;
           min-width: 3em;
-          padding-left: 0.15em;
-          padding-right: 0.15em; }
+          padding-left: 0.03em;
+          padding-right: 0.03em; }
           body#content #nav-bar #nav-items ul li a {
             color: black;
             text-decoration: none;
