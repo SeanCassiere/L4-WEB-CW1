@@ -220,7 +220,19 @@ if (ProductCheckout) {
         } else if (ProductPersonalCheck(this.form)==false) {
             alert('All customer details MUST be entered.')
         } else if (ProductPersonalCheck(this.form)==true || runningTotal>0) {
-            alert('Passed All')
+            var productCartMessage = "Dear "+this.form.prodCustName.value+", you have ordered ";
+            if (this.form.product1.checked==true){
+                productCartMessage+=this.form.prodQuantity1.value+" copies of Bebe Rexha - Expectations at $"+this.form.prodQuantity1.value*8+", ";
+            }
+            if (this.form.product2.checked==true){
+                productCartMessage+=this.form.prodQuantity2.value+" copies of Twenty One Pilots - Trench at $"+this.form.prodQuantity2.value*7+", ";
+            }
+            if (this.form.product3.checked==true){
+                productCartMessage+=this.form.prodQuantity3.value+" copies of Drake - Scorpion at $"+this.form.prodQuantity3.value*9+", ";
+            }
+            productCartMessage = productCartMessage.slice(0, -2);
+            productCartMessage +=". Your Total is $"+runningTotal+".";
+            alert(productCartMessage)
         }
     })
 }
