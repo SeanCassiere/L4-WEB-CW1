@@ -1,16 +1,3 @@
-/*
-//Button Scroller Function
-function scrollToTop() {
-	var position = document.body.scrollTop || document.documentElement.scrollTop;
-	if (position){
-		window.scrollBy(0,-Math.max(10, Math.floor(position / 10)));
-		scrollAnimation=setTimeout('scrollToTop()',10);
-	}
-	else clearTimeout(scrollAnimation);
-}
-//document.getElementById("scrollNow").onclick=function(){scrollToTop(); return false}; // Eased Scroll
-*/
-
 function increaseFontSize() {
     docElement = document.getElementById('content');
     style = window.getComputedStyle(docElement, null).getPropertyValue('font-size');
@@ -186,4 +173,54 @@ if (MusicQuizFormStartButton) {
         musicquizLoadDisable(true);
         timeOut = setInterval(musicquizTimer, 1000);
     });
+}
+
+// Products
+var runningTotal;
+function productPriceChecker(productForm){
+    document.getElementById('products-chosen').innerHTML = "<p class='text-bold'>Products Chosen:</p>";
+    if (productForm.product1.checked==true){
+        runningTotal += productForm.prodQuantity1.value * 8;
+        document.getElementById('products-chosen').innerHTML += "<p>Bebe Rexha - Expectations x "+productForm.prodQuantity1.value+" = $"+productForm.prodQuantity1.value * 8+"</p>";
+    }
+    if (productForm.product2.checked==true){
+        runningTotal += productForm.prodQuantity2.value * 7;
+        document.getElementById('products-chosen').innerHTML += "<p>Twenty One Pilots - Trench x "+productForm.prodQuantity2.value+" = $"+productForm.prodQuantity2.value * 7+"</p>";
+    }
+    if (productForm.product3.checked==true){
+        runningTotal += productForm.prodQuantity3.value * 9;
+        document.getElementById('products-chosen').innerHTML += "<p>Drake - Scorpion x "+productForm.prodQuantity3.value+" = $"+productForm.prodQuantity3.value * 9+"</p>";
+    }
+    document.getElementById('cart-total-price').innerHTML = "$"+runningTotal;
+}
+
+function ProductPersonalCheck(PersonalForm){
+    if (PersonalForm.prodCustName.value.length==0 || PersonalForm.prodCustAddress.value.length==0){
+        return false
+    } else {
+        return true
+    }
+}
+// (Conditional Event Listener)
+var ProductPriceCheck = document.getElementById("refresh-cart");
+if (ProductPriceCheck) {
+    ProductPriceCheck.addEventListener("click", function(){
+        runningTotal = 0;
+        productPriceChecker(this.form);
+    })
+}
+
+var ProductCheckout = document.getElementById("checkout-cart");
+if (ProductCheckout) {
+    ProductCheckout.addEventListener("click", function(){
+        runningTotal = 0;
+        productPriceChecker(this.form);
+        if (runningTotal==0) {
+            alert('Products must be selected')
+        } else if (ProductPersonalCheck(this.form)==false) {
+            alert('All customer details MUST be entered.')
+        } else if (ProductPersonalCheck(this.form)==true || runningTotal>0) {
+            alert('Passed All')
+        }
+    })
 }
