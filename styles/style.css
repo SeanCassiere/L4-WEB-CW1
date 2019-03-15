@@ -432,4 +432,67 @@ body#content {
         grid-row: 2/2;
         text-align: center; } }
 
+body#cv {
+  background-color: #F6F7FF;
+  font-family: 'Lato', sans-serif; }
+  body#cv .return {
+    padding: 1em 1em 1em 1em;
+    margin: 0 auto;
+    max-width: 960px;
+    background-color: #F0F0F0;
+    font-size: 2em;
+    text-align: center;
+    box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1); }
+    body#cv .return a {
+      text-decoration: none;
+      color: black; }
+      body#cv .return a:hover {
+        color: #FF4D4D; }
+  body#cv .mainCV {
+    padding: 1em 1em 1em 1em;
+    margin: 0 auto;
+    margin-top: 1em;
+    max-width: 960px;
+    background-color: #F0F0F0;
+    box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-auto-rows: minmax(10px, auto);
+    grid-template-areas: "title title title title title title title title title title title title" "BigName BigName BigName BigName BigName BigName BigName BigName BigName image image image" "baseInfo baseInfo baseInfo baseInfo baseInfo baseAddr baseAddr baseAddr baseAddr image image image" "edu edu edu edu edu edu edu edu edu edu edu edu" "wexp wexp wexp wexp wexp wexp wexp wexp wexp wexp wexp wexp"; }
+    body#cv .mainCV .title {
+      grid-area: title;
+      padding-bottom: 1em; }
+    body#cv .mainCV .image {
+      grid-area: image;
+      text-align: center; }
+      body#cv .mainCV .image img {
+        width: 7em;
+        border-radius: 50%; }
+    body#cv .mainCV .BigName {
+      grid-area: BigName; }
+    body#cv .mainCV .baseInfo {
+      grid-area: baseInfo; }
+    body#cv .mainCV .baseAddr {
+      grid-area: baseAddr; }
+    body#cv .mainCV .education {
+      grid-area: edu;
+      padding-top: 1.5em; }
+      body#cv .mainCV .education .item {
+        padding: 0.5em 1em 0.5em 1em; }
+        body#cv .mainCV .education .item p {
+          padding-left: 1em;
+          padding-top: 0.25em; }
+        body#cv .mainCV .education .item p.location {
+          font-weight: bold; }
+    body#cv .mainCV .wExp {
+      grid-area: wexp;
+      padding-top: 1.5em; }
+      body#cv .mainCV .wExp .item {
+        padding: 0.5em 1em 0.5em 1em; }
+        body#cv .mainCV .wExp .item p {
+          padding-left: 1em;
+          padding-top: 0.25em; }
+        body#cv .mainCV .wExp .item p.location {
+          font-weight: bold; }
+
 /*# sourceMappingURL=style.css.map */
