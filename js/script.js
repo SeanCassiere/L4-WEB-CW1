@@ -292,3 +292,26 @@ if (galleryFontColor) {
         document.getElementById("footer").style.color = galleryFontColor.pageFontColor.value;
     })
 }
+
+//Home Members
+function HomeMemberChange(position, link){
+    document.getElementById("memberHover").innerHTML ="<h1>"+position+"</h1><a href='"+link+"'>Curriculum Vitae</a>" ;
+}
+
+// (Conditional) Event Listener
+var MemberImage1 = document.getElementById('homeMember1');
+if (MemberImage1) {
+    MemberImage1.addEventListener('mouseover', function(){HomeMemberChange("Student 1","cv/dinuka_cv.html")})
+}
+var MemberImage2 = document.getElementById('homeMember2');
+if (MemberImage2) {
+    MemberImage2.addEventListener('mouseover', function(){HomeMemberChange("Student 2","cv/sean_cv.html")})
+}
+var MemberImage3 = document.getElementById('homeMember3');
+if (MemberImage3) {
+    MemberImage3.addEventListener('mouseover', function(){HomeMemberChange("Student 3","cv/isanka_cv.html")})
+}
+var MemberImage4 = document.getElementById('homeMember4');
+if (MemberImage4) {
+    MemberImage4.addEventListener('mouseover', function(){HomeMemberChange("Student 4","cv/kavisha_cv.html")})
+}
