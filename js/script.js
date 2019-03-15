@@ -294,24 +294,24 @@ if (galleryFontColor) {
 }
 
 //Home Members
-function HomeMemberChange(position, link){
-    document.getElementById("memberHover").innerHTML ="<h1>"+position+"</h1><a href='"+link+"'>Curriculum Vitae</a>" ;
+function HomeMemberChange(position, cvlink, topic, topLink){
+    document.getElementById("memberHover").innerHTML ="<h1>"+position+"</h1><a href='"+cvlink+"'>Curriculum Vitae</a><br /><a href='"+topLink+"'>"+topic+"</a>" ;
 }
 
 // (Conditional) Event Listener
 var MemberImage1 = document.getElementById('homeMember1');
 if (MemberImage1) {
-    MemberImage1.addEventListener('mouseover', function(){HomeMemberChange("Student 1","cv/dinuka_cv.html")})
+    MemberImage1.addEventListener('mouseover', function(){HomeMemberChange("Student 1","cv/dinuka_cv.html","Audiophile Music","pages/audiophile_music.html")})
 }
 var MemberImage2 = document.getElementById('homeMember2');
 if (MemberImage2) {
-    MemberImage2.addEventListener('mouseover', function(){HomeMemberChange("Student 2","cv/sean_cv.html")})
+    MemberImage2.addEventListener('mouseover', function(){HomeMemberChange("Student 2","cv/sean_cv.html","What is Vinyl?","pages/what_is_vinyl.html")})
 }
 var MemberImage3 = document.getElementById('homeMember3');
 if (MemberImage3) {
-    MemberImage3.addEventListener('mouseover', function(){HomeMemberChange("Student 3","cv/isanka_cv.html")})
+    MemberImage3.addEventListener('mouseover', function(){HomeMemberChange("Student 3","cv/isanka_cv.html","Vinyl Sound &amp; Colour","pages/vinyl_sound_n-color.html")})
 }
 var MemberImage4 = document.getElementById('homeMember4');
 if (MemberImage4) {
-    MemberImage4.addEventListener('mouseover', function(){HomeMemberChange("Student 4","cv/kavisha_cv.html")})
+    MemberImage4.addEventListener('mouseover', function(){HomeMemberChange("Student 4","cv/kavisha_cv.html","Vinyl Distortion","pages/vinyl_distortion.html")})
 }
