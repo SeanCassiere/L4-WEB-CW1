@@ -4,8 +4,8 @@ Website developed for the coursework of Web Design for Level 4.
 Currently, the project is marked as 'Work-in-Progress'.
 
 # Group Members
-+ Student 1 - Dinuka Bandara (2017193, w1716114)
-+ Student 2 - Sean Cassiere (2016074, w1715755)
++ Student 1 - Sean Cassiere (2016074, w1715755)
++ Student 2 - Dinuka Bandara (2017193, w1716114)
 + Student 3 - Isanka Dissanayake (2017122, w1715757)
 + Student 4 - Kavisha Wijeyasuriya (2016040, w1715774)
 
