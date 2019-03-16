@@ -301,11 +301,11 @@ function HomeMemberChange(position, cvlink, topic, topLink){
 // (Conditional) Event Listener
 var MemberImage1 = document.getElementById('homeMember1');
 if (MemberImage1) {
-    MemberImage1.addEventListener('mouseover', function(){HomeMemberChange("Student 1","cv/dinuka_cv.html","Audiophile Music","pages/audiophile_music.html")})
+    MemberImage1.addEventListener('mouseover', function(){HomeMemberChange("Student 1","cv/sean_cv.html","What is Vinyl?","pages/what_is_vinyl.html")})
 }
 var MemberImage2 = document.getElementById('homeMember2');
 if (MemberImage2) {
-    MemberImage2.addEventListener('mouseover', function(){HomeMemberChange("Student 2","cv/sean_cv.html","What is Vinyl?","pages/what_is_vinyl.html")})
+    MemberImage2.addEventListener('mouseover', function(){HomeMemberChange("Student 2","cv/dinuka_cv.html","Audiophile Music","pages/audiophile_music.html")})
 }
 var MemberImage3 = document.getElementById('homeMember3');
 if (MemberImage3) {
