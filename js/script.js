@@ -1,3 +1,4 @@
+// (Global) Font Resize: Student 1
 function increaseFontSize() {
     docElement = document.getElementById('content');
     style = window.getComputedStyle(docElement, null).getPropertyValue('font-size');
@@ -15,8 +16,7 @@ function decreaseFontSize() {
 document.getElementById("decreaseFont").addEventListener('click',function(){decreaseFontSize();});
 document.getElementById("increaseFont").addEventListener('click',function(){increaseFontSize();});
 
-
-// Page Scrolling Button: Student 2
+// Page Scrolling Button: Student 1
 var prevScrollpos = window.pageYOffset;
 window.onscroll = function() {
     var currentScrollPos = window.pageYOffset;
@@ -78,8 +78,10 @@ function musicquizValidator(MusicQuizForm){
     var question06 = MusicQuizForm.question06.value;
     var question07 = MusicQuizForm.question07.value;
     var question08 = MusicQuizForm.question08.value;
+    var question09 = MusicQuizForm.question09.value;
+    var question10 = MusicQuizForm.question10.value;
     
-    if ( question01.length == 0 || question02.length == 0 || question03.length == 0 || question04.length ==0 || question05.length ==0 || question06.length ==0 || question07.length ==0 || question08.length ==0 ){
+    if ( question01.length == 0 || question02.length == 0 || question03.length == 0 || question04.length ==0 || question05.length ==0 || question06.length ==0 || question07.length ==0 || question08.length ==0 || question09.length ==0 || question10.length ==0 ){
         alert('All Questions must be answered.')
     } else {
         var timeRemaining = quizDuration-sec;
@@ -125,8 +127,18 @@ function musicquizValidator(MusicQuizForm){
         } else {
             totalMarks-=1;document.getElementById('question08-box').style.backgroundColor = '#FF3A3A';
         }
+        if (question09=="Ringo Starr") {
+            totalMarks+=2;document.getElementById('question09-box').style.backgroundColor = '#38FF2F';
+        } else {
+            totalMarks-=1;document.getElementById('question09-box').style.backgroundColor = '#FF3A3A';
+        }
+        if (question10=="The Eagles") {
+            totalMarks+=2;document.getElementById('question10-box').style.backgroundColor = '#38FF2F';
+        } else {
+            totalMarks-=1;document.getElementById('question10-box').style.backgroundColor = '#FF3A3A';
+        }
         triedQuiz = true;
-        alert('You scored a '+totalMarks+' out of 16. It took you '+timeRemaining+'s to complete this quiz.');
+        alert('You scored a '+totalMarks+' out of 20. It took you '+timeRemaining+'s to complete this quiz.');
         document.getElementById("startTimer").value = "Retry";
     }
 }
@@ -175,7 +187,7 @@ if (MusicQuizFormStartButton) {
     });
 }
 
-// Products
+// Products: Student 1
 var runningTotal;
 function productPriceChecker(productForm){
     document.getElementById('products-chosen').innerHTML = "<p class='text-bold'>Products Chosen:</p>";
@@ -237,7 +249,7 @@ if (ProductCheckout) {
     })
 }
 
-// Gallery
+// Gallery: Student 4
 
 function galleryImageChange(taggedItem){
     var bigImg = document.getElementById('expandedImage');
@@ -293,7 +305,7 @@ if (galleryFontColor) {
     })
 }
 
-//Home Members
+//Home Members: Student 3
 function HomeMemberChange(position, cvlink, topic, topLink){
     document.getElementById("memberHover").innerHTML ="<h1>"+position+"</h1><a href='"+cvlink+"'>Curriculum Vitae</a><br /><a href='"+topLink+"'>"+topic+"</a>" ;
 }
