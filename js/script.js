@@ -31,7 +31,7 @@ window.onscroll = function() {
         document.getElementById("scrollNow").style.opacity = "1" ;
     }
     prevScrollpos = currentScrollPos;
-}
+};
 
 
 // Feedback Form: Student 2
@@ -53,7 +53,9 @@ function feedbackValidator(FeedBackForm){
 }
 // (Conditional) Event Listener
 var FeedBackFormElement = document.getElementById("feedbackSubmit");
-if (FeedBackFormElement) { FeedBackFormElement.addEventListener('click',function(){feedbackValidator(this.form)}); }
+if (FeedBackFormElement) {
+    FeedBackFormElement.addEventListener('click',function(){feedbackValidator(this.form)});
+};
 
 
 // Music Quiz Form: Student 3
@@ -67,7 +69,7 @@ function musicquizLoadDisable(status){
     for (var i = 0; i < cells.length; i++) { 
         cells[i].disabled = status;
     }
-}
+};
 
 function musicquizValidator(MusicQuizForm){
     var question01 = MusicQuizForm.question01.value;
@@ -247,7 +249,7 @@ if (ProductCheckout) {
             alert(productCartMessage)
         }
     })
-}
+};
 
 // Gallery: Student 4
 
@@ -325,5 +327,5 @@ if (MemberImage3) {
 }
 var MemberImage4 = document.getElementById('homeMember4');
 if (MemberImage4) {
-    MemberImage4.addEventListener('mouseover', function(){HomeMemberChange("Student 4","cv/kavisha_cv.html","Vinyl Distortion","pages/vinyl_distortion.html")})
+    MemberImage4.addEventListener('mouseover', function(){HomeMemberChange("Student 4","cv/kavisha_cv.html","Vinyl Distortion","pages/vinyl_distortion.html");})
 }
