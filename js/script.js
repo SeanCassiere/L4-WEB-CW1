@@ -5,7 +5,6 @@ function increaseFontSize() {
     currentFontSize = parseFloat(style);
     docElement.style.fontSize = (currentFontSize + 2) + 'px';
 }
-
 function decreaseFontSize() {
 	docElement = document.getElementById('content');
     style = window.getComputedStyle(docElement, null).getPropertyValue('font-size');
@@ -15,7 +14,6 @@ function decreaseFontSize() {
 // (Global) Font Resize Event Listeners
 document.getElementById("decreaseFont").addEventListener('click',function(){decreaseFontSize();});
 document.getElementById("increaseFont").addEventListener('click',function(){increaseFontSize();});
-
 // Page Scrolling Button: Student 1
 var prevScrollpos = window.pageYOffset;
 window.onscroll = function() {
@@ -32,8 +30,6 @@ window.onscroll = function() {
     }
     prevScrollpos = currentScrollPos;
 };
-
-
 // Feedback Form: Student 2
 function feedbackValidator(FeedBackForm){
     var feedbackName = FeedBackForm.feedbackname.value;
@@ -54,23 +50,19 @@ function feedbackValidator(FeedBackForm){
 // (Conditional) Event Listener
 var FeedBackFormElement = document.getElementById("feedbackSubmit");
 if (FeedBackFormElement) {
-    FeedBackFormElement.addEventListener('click',function(){feedbackValidator(this.form)});
-};
-
-
+    FeedBackFormElement.addEventListener('click',function(){feedbackValidator(this.form);});
+}
 // Music Quiz Form: Student 3
 var triedQuiz = false; // Created as a bool var to uncheck the selected radios, change question colours
 var quizDuration = 40;
 var timeOut;
 var sec;
-
 function musicquizLoadDisable(status){
     var cells = document.getElementsByClassName("questions"); 
-    for (var i = 0; i < cells.length; i++) { 
+    for (let i = 0; i < cells.length; i++) { 
         cells[i].disabled = status;
     }
-};
-
+}
 function musicquizValidator(MusicQuizForm){
     var question01 = MusicQuizForm.question01.value;
     var question02 = MusicQuizForm.question02.value;
@@ -82,9 +74,8 @@ function musicquizValidator(MusicQuizForm){
     var question08 = MusicQuizForm.question08.value;
     var question09 = MusicQuizForm.question09.value;
     var question10 = MusicQuizForm.question10.value;
-    
     if ( question01.length == 0 || question02.length == 0 || question03.length == 0 || question04.length ==0 || question05.length ==0 || question06.length ==0 || question07.length ==0 || question08.length ==0 || question09.length ==0 || question10.length ==0 ){
-        alert('All Questions must be answered.')
+        alert('All Questions must be answered.');
     } else {
         var timeRemaining = quizDuration-sec;
         var totalMarks = 0;
@@ -144,7 +135,6 @@ function musicquizValidator(MusicQuizForm){
         document.getElementById("startTimer").value = "Retry";
     }
 }
-
 function musicquizTimer(){
     musicquizLoadDisable(false);
     if(sec>0){
@@ -155,28 +145,25 @@ function musicquizTimer(){
 	}
 	document.getElementById("quizTimer").innerHTML = sec+'s';
 }
-
 function musicquizReset(quizForm){
     var cells = document.getElementsByClassName("questions"); 
-    for (var i = 0; i < cells.length; i++) {
+    for (let i = 0; i < cells.length; i++) {
         cells[i].checked = false;
     }
-    var cells = document.getElementsByClassName("colored-questions"); 
-    for (var i = 0; i < cells.length; i++) {
+    cells = document.getElementsByClassName("colored-questions"); 
+    for (let i = 0; i < cells.length; i++) {
         cells[i].style.backgroundColor = 'white';
     }
 }
 // (Conditional) Event Listeners
 var MusicQuizFormLoad = document.getElementById("music-quiz-form");
 if (MusicQuizFormLoad) {
-    MusicQuizFormLoad.addEventListener("load", musicquizLoadDisable(true))
+    MusicQuizFormLoad.addEventListener("load", musicquizLoadDisable(true));
 }
-
 var MusicQuizFormSubmit = document.getElementById("quizSubmit");
 if (MusicQuizFormSubmit) {
-    MusicQuizFormSubmit.addEventListener('click',function(){musicquizValidator(this.form)});
+    MusicQuizFormSubmit.addEventListener('click',function(){musicquizValidator(this.form);});
 }
-
 var MusicQuizFormStartButton = document.getElementById("startTimer");
 if (MusicQuizFormStartButton) {
     MusicQuizFormStartButton.addEventListener('click',function(){
@@ -188,7 +175,6 @@ if (MusicQuizFormStartButton) {
         timeOut = setInterval(musicquizTimer, 1000);
     });
 }
-
 // Products: Student 1
 var runningTotal;
 function productPriceChecker(productForm){
@@ -207,12 +193,11 @@ function productPriceChecker(productForm){
     }
     document.getElementById('cart-total-price').innerHTML = "$"+runningTotal;
 }
-
 function ProductPersonalCheck(PersonalForm){
     if (PersonalForm.prodCustName.value.length==0 || PersonalForm.prodCustAddress.value.length==0){
-        return false
+        return false;
     } else {
-        return true
+        return true;
     }
 }
 // (Conditional Event Listener)
@@ -221,18 +206,17 @@ if (ProductPriceCheck) {
     ProductPriceCheck.addEventListener("click", function(){
         runningTotal = 0;
         productPriceChecker(this.form);
-    })
+    });
 }
-
 var ProductCheckout = document.getElementById("checkout-cart");
 if (ProductCheckout) {
     ProductCheckout.addEventListener("click", function(){
         runningTotal = 0;
         productPriceChecker(this.form);
         if (runningTotal==0) {
-            alert('Products must be selected')
+            alert('Products must be selected');
         } else if (ProductPersonalCheck(this.form)==false) {
-            alert('All customer details MUST be entered.')
+            alert('All customer details MUST be entered.');
         } else if (ProductPersonalCheck(this.form)==true || runningTotal>0) {
             var productCartMessage = "Dear "+this.form.prodCustName.value+", you have ordered ";
             if (this.form.product1.checked==true){
@@ -246,47 +230,43 @@ if (ProductCheckout) {
             }
             productCartMessage = productCartMessage.slice(0, -2);
             productCartMessage +=". Your Total is $"+runningTotal+".";
-            alert(productCartMessage)
+            alert(productCartMessage);
         }
-    })
-};
-
+    });
+}
 // Gallery: Student 4
-
 function galleryImageChange(taggedItem){
-    var bigImg = document.getElementById('expandedImage');
-    var bigImgTxt = document.getElementById('expandedImageText');
+    let bigImg = document.getElementById('expandedImage');
+    let bigImgTxt = document.getElementById('expandedImageText');
     bigImg.src = taggedItem.src;
     bigImgTxt.innerHTML = taggedItem.alt;
     bigImg.parentElement.style.display = "block";
 }
-
 // (Conditional) Event Listener
 var galleryImage1 = document.getElementById('galleryClick1');
 if (galleryImage1) {
-    galleryImage1.addEventListener('click', function(){galleryImageChange(this)})
+    galleryImage1.addEventListener('click', function(){galleryImageChange(this);});
 }
 var galleryImage2 = document.getElementById('galleryClick2');
 if (galleryImage2) {
-    galleryImage2.addEventListener('click', function(){galleryImageChange(this)})
+    galleryImage2.addEventListener('click', function(){galleryImageChange(this);});
 }
 var galleryImage3 = document.getElementById('galleryClick3');
 if (galleryImage3) {
-    galleryImage3.addEventListener('click', function(){galleryImageChange(this)})
+    galleryImage3.addEventListener('click', function(){galleryImageChange(this);});
 }
 var galleryImage4 = document.getElementById('galleryClick4');
 if (galleryImage4) {
-    galleryImage4.addEventListener('click', function(){galleryImageChange(this)})
+    galleryImage4.addEventListener('click', function(){galleryImageChange(this);});
 }
 var galleryImage5 = document.getElementById('galleryClick5');
 if (galleryImage5) {
-    galleryImage5.addEventListener('click', function(){galleryImageChange(this)})
+    galleryImage5.addEventListener('click', function(){galleryImageChange(this);});
 }
 var galleryImage6 = document.getElementById('galleryClick6');
 if (galleryImage6) {
-    galleryImage6.addEventListener('click', function(){galleryImageChange(this)})
+    galleryImage6.addEventListener('click', function(){galleryImageChange(this);});
 }
-
 var galleryPageColor = document.getElementById('pageBackgroundForm');
 if (galleryPageColor) {
     galleryPageColor.addEventListener('click', function(){
@@ -294,9 +274,8 @@ if (galleryPageColor) {
         document.getElementById("nav-bar").style.backgroundColor = galleryPageColor.pageBackground.value;
         document.getElementById("editor").style.backgroundColor = galleryPageColor.pageBackground.value;
         document.getElementById("footer").style.backgroundColor = galleryPageColor.pageBackground.value;
-    })
+    });
 }
-
 var galleryFontColor = document.getElementById('pageFontColorForm');
 if (galleryFontColor) {
     galleryFontColor.addEventListener('click', function(){
@@ -304,28 +283,26 @@ if (galleryFontColor) {
         document.getElementById("nav-bar").style.color = galleryFontColor.pageFontColor.value;
         document.getElementById("editor").style.color = galleryFontColor.pageFontColor.value;
         document.getElementById("footer").style.color = galleryFontColor.pageFontColor.value;
-    })
+    });
 }
-
 //Home Members: Student 3
 function HomeMemberChange(position, cvlink, topic, topLink){
     document.getElementById("memberHover").innerHTML ="<h1>"+position+"</h1><a href='"+cvlink+"'>Curriculum Vitae</a><br /><a href='"+topLink+"'>"+topic+"</a>" ;
 }
-
 // (Conditional) Event Listener
 var MemberImage1 = document.getElementById('homeMember1');
 if (MemberImage1) {
-    MemberImage1.addEventListener('mouseover', function(){HomeMemberChange("Student 1","cv/sean_cv.html","What is Vinyl?","pages/what_is_vinyl.html")})
+    MemberImage1.addEventListener('mouseover', function(){HomeMemberChange("Student 1","cv/sean_cv.html","What is Vinyl?","pages/what_is_vinyl.html");});
 }
 var MemberImage2 = document.getElementById('homeMember2');
 if (MemberImage2) {
-    MemberImage2.addEventListener('mouseover', function(){HomeMemberChange("Student 2","cv/dinuka_cv.html","Audiophile Music","pages/audiophile_music.html")})
+    MemberImage2.addEventListener('mouseover', function(){HomeMemberChange("Student 2","cv/dinuka_cv.html","Audiophile Music","pages/audiophile_music.html");});
 }
 var MemberImage3 = document.getElementById('homeMember3');
 if (MemberImage3) {
-    MemberImage3.addEventListener('mouseover', function(){HomeMemberChange("Student 3","cv/isanka_cv.html","Vinyl Sound &amp; Colour","pages/vinyl_sound_n-color.html")})
+    MemberImage3.addEventListener('mouseover', function(){HomeMemberChange("Student 3","cv/isanka_cv.html","Vinyl Sound &amp; Colour","pages/vinyl_sound_n-color.html");});
 }
 var MemberImage4 = document.getElementById('homeMember4');
 if (MemberImage4) {
-    MemberImage4.addEventListener('mouseover', function(){HomeMemberChange("Student 4","cv/kavisha_cv.html","Vinyl Distortion","pages/vinyl_distortion.html");})
+    MemberImage4.addEventListener('mouseover', function(){HomeMemberChange("Student 4","cv/kavisha_cv.html","Vinyl Distortion","pages/vinyl_distortion.html");});
 }
